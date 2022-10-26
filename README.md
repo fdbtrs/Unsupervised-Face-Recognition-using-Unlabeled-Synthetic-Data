@@ -1,7 +1,6 @@
 # (USynthFace) Unsupervised-Face-Recognition-using-Unlabeled-Synthetic-Data
 
-![overview](https://raw.githubusercontent.com/fdbtrs/Unsupervised-Face-Recognition-using-Unlabeled-Synthetic-Data/main/images/USynthFace_framework.png)
-
+![USynthFace Overview](images/USynthFace_framework.png?raw=true)
 
 ## Pretrained Models
 | Model  | Epochs | Pretrained Model|
