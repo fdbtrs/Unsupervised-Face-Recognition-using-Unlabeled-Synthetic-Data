@@ -1,0 +1,12 @@
+
+__pycache__/
+
+*.pth
+
+*.pkl
+
+*.pt
+
+*.npy
+
+.vscode/
