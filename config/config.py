@@ -3,12 +3,12 @@ architecture = "resnet50"
 batch_size = 128
 workers = 8
 
-auto_schedule = False
+auto_schedule = True
 learning_rate = 0.1
 epochs = 200 if auto_schedule else 40
 schedule = [8, 16, 24, 32]
 
-output_dir = "output/disco100K_test"
+output_dir = "output/disco100K"
 resume_epoch = 0
 
 momentum = 0.9
@@ -37,7 +37,7 @@ moco_m = 0.999
 moco_t = 0.07
 drop_ratio = 0.0
 # margin value for loss function
-loss_margin = 0.0
+loss_margin = 0.1
 
 """
 Options for moco v2

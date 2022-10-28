@@ -3,11 +3,11 @@
 ![USynthFace Overview](images/USynthFace_framework.png?raw=true)
 
 ## Pretrained Models
-| Model  | Epochs | Pretrained Model|
-| ------------- | ------------- | ------------- |
-| USynthFace100K    | 40 | [pretrained-model](link) |
-| USynthFace100K_m  | 200 | [pretrained-model](link) |
-| USynthFace400K_m  | 200 | [pretrained-model](link) |
+| Model  | Images | LFW | AgeDB-30 | CFP-FP | CA-LFW | CP-LFW | Pretrained Model |
+| ----------- | ---- | ----- | ----- | ----- | ----- | ----- | ---------------- |
+| USynthFace  | 100K | 91.52 | 69.30 | 78.46 | 75.35 | 71.93 | [download](link) |
+| USynthFace  | 200K | 91.93 | 71.23 | 78.03 | 76.73 | 72.27 | [download](link) |
+| USynthFace  | 400K | 92.23 | 71.62 | 78.56 | 77.05 | 72.03 | [download](link) |
 
 
 ## Requirements
@@ -28,12 +28,12 @@ We recomment creating a virtual environment with *`requirementsTorch.txt`*
 ## Training Dataset Preparation
 To generate images run in `DiscoFaceGAN/`:
 ```
-$ generate_imgs.sh --save_path "save/path/of/unaligned/images"
+generate_imgs.sh --save_path "save/path/of/unaligned/images"
 ```
 
 To align images run:
 ```
-$ align_imgs.sh --in_folder "path/to/image/folder" --out_folder "save/path/of/aligned/images"
+align_imgs.sh --in_folder "path/to/image/folder" --out_folder "save/path/of/aligned/images"
 ```
 Set `datapath="../.."` in *`config/config.py`* to folder with aligned DiscoFaceGAN images.
 
@@ -44,12 +44,14 @@ Set `eval_datasets="../.."` in *`config/config.py`* to your unzipped folder whic
 ## Train USynthFace
 Change *`config/config.py`* and *`train.sh`* to your preferences and execute:
 ```
-$ train.sh
+train.sh
 ```
+
+To reproduce the results of the pretrained models, change `number_of_images=` and `output_dir=` in *`config/config.py`*.
 
 ## Evaluate USynthFace
 In *`evaluation/`* run:
 ```
-$ CUDA_VISIBLE_DEVICES=0 python eval.py --model_folder "path/to/model/folder/" --rec_path "path/to/folder/with/bin/files"
+CUDA_VISIBLE_DEVICES=0 python eval.py --model_folder "path/to/model/folder/" --rec_path "path/to/folder/with/bin/files"
 ```
 Test log is saved in model_folder.

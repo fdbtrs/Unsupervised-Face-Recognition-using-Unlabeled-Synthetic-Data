@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
 import argparse
 import math
 import os
@@ -35,55 +33,6 @@ def main(args):
     rank = dist.get_rank()
     world_size = dist.get_world_size()
     cudnn.benchmark = True
-
-    # RandAug num operations and magnitude experiment
-    if args.mag != 0:
-        assert args.num_ops > 0 and 0 < args.mag < 31
-        cfg.output_dir = cfg.output_dir + f"_{args.num_ops}_{args.mag}"
-
-    # RandAug augmentation space experiment
-    aug_operation_names = [
-        "Identity",
-        "ShearX",
-        "ShearY",
-        "TranslateX",
-        "TranslateY",
-        "Rotate",
-        "Brightness",
-        "Color",
-        "Contrast",
-        "Sharpness",
-        "Posterize",
-        "Solarize",
-        "AutoContrast",
-        "Equalize",
-        "Grayscale",
-        "ResizedCrop",
-    ]
-    if args.aug_operation != "none":
-        assert args.aug_operation in aug_operation_names
-        cfg.output_dir = cfg.output_dir + f"_{args.aug_operation}"
-
-    # Margin experiment
-    if args.margin > 0:
-        assert 0 < args.margin <= 2
-        cfg.output_dir = cfg.output_dir + f"_margin_{args.margin}"
-        cfg.loss_margin = args.margin
-
-    # Queue size experiment
-    if args.q_size > 0:
-        cfg.output_dir = cfg.output_dir + f"_Qsize_{args.q_size}"
-        cfg.moco_k = args.q_size
-
-    # Queue type experiment
-    if args.q_type != "none":
-        cfg.output_dir = cfg.output_dir + f"_Qtype_{args.q_type}"
-        cfg.queue_type = args.q_type
-
-    # Database size experiment
-    if args.db_size != 0:
-        cfg.output_dir = cfg.output_dir + f"_dbsize_{args.db_size}"
-        cfg.number_of_images = args.db_size
 
     os.makedirs(cfg.output_dir, exist_ok=True)
     log_root = logging.getLogger()
@@ -312,26 +261,5 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="PyTorch Master MoCo Training")
     parser.add_argument("--resume", type=int, default=0, help="resume training")
     parser.add_argument("--local_rank", type=int, default=0, help="local_rank")
-    parser.add_argument(
-        "--num_ops", type=int, default=0, help="RandAug number operations"
-    )
-    parser.add_argument("--mag", type=int, default=0, help="RandAug magnitude")
-    parser.add_argument(
-        "--aug_operation",
-        type=str,
-        default="none",
-        help="Augmentation operation under testing",
-    )
-    parser.add_argument(
-        "--margin", type=float, default=0.0, help="Margin for loss function"
-    )
-    parser.add_argument("--q_size", type=int, default=0, help="queue size")
-    parser.add_argument(
-        "--q_type",
-        type=str,
-        default="none",
-        help="queue type: normal, classQ, simQ, dissimQ, centerQ",
-    )
-    parser.add_argument("--db_size", type=int, default=0, help="size of database")
     args = parser.parse_args()
     main(args)
