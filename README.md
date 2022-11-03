@@ -1,5 +1,5 @@
-# (USynthFace) Unsupervised-Face-Recognition-using-Unlabeled-Synthetic-Data
-
+#This is the offical repository of the paper Unsupervised Face Recognition using Unlabeled Synthetic Data
+##Paper accepted at Face and Gesture 2023 
 ![USynthFace Overview](images/USynthFace_framework.png?raw=true)
 
 ## Pretrained Models
@@ -16,7 +16,7 @@
 - Tensorflow 1.12 with GPU support
 
 We recommend creating a virtual environment with *`requirementsTF.txt`*.  
-Download pretrained [DiscoFaceGAN model](https://drive.google.com/uc?id=1nT_cf610q5mxD_jACvV43w4SYBxsPUBq) and save in `DiscoFaceGAN/pretrained/`.
+Download pretrained [DiscoFaceGAN model](https://drive.google.com/uc?id=1nT_cf610q5mxD_jACvV43w4SYBxsPUBq), strickly follow [DiscoFaceGAN](https://github.com/microsoft/DiscoFaceGAN) license and save in `DiscoFaceGAN/pretrained/`. 
 
 ### Requirements for USynthFace Training
 - pytorch 1.11.0
@@ -55,3 +55,17 @@ In *`evaluation/`* run:
 CUDA_VISIBLE_DEVICES=0 python eval.py --model_folder "path/to/model/folder/" --rec_path "path/to/folder/with/bin/files"
 ```
 Test log is saved in model_folder.
+
+
+##References:
+- [DiscoFaceGAN](https://github.com/microsoft/DiscoFaceGAN) 
+- [Moco](https://github.com/facebookresearch/moco)
+
+
+## License
+
+```
+This project is licensed under the terms of the Attribution-NonCommercial-ShareAlike 4.0 
+International (CC BY-NC-SA 4.0) license. 
+Copyright (c) 2021 Fraunhofer Institute for Computer Graphics Research IGD Darmstadt
+```
