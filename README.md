@@ -1,5 +1,5 @@
 This is the offical repository of the paper:
-#Unsupervised Face Recognition using Unlabeled Synthetic Data
+# Unsupervised Face Recognition using Unlabeled Synthetic Data
 ## Paper accepted at Face and Gesture 2023 
 ![USynthFace Overview](images/USynthFace_framework.png?raw=true)
 
