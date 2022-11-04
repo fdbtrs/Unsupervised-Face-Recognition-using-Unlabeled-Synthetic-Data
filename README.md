@@ -1,5 +1,5 @@
-#This is the offical repository of the paper Unsupervised Face Recognition using Unlabeled Synthetic Data
-##Paper accepted at Face and Gesture 2023 
+# This is the offical repository of the paper Unsupervised Face Recognition using Unlabeled Synthetic Data
+## Paper accepted at Face and Gesture 2023 
 ![USynthFace Overview](images/USynthFace_framework.png?raw=true)
 
 ## Pretrained Models
@@ -57,7 +57,7 @@ CUDA_VISIBLE_DEVICES=0 python eval.py --model_folder "path/to/model/folder/" --r
 Test log is saved in model_folder.
 
 
-##References:
+## References:
 - [DiscoFaceGAN](https://github.com/microsoft/DiscoFaceGAN) 
 - [Moco](https://github.com/facebookresearch/moco)
 
