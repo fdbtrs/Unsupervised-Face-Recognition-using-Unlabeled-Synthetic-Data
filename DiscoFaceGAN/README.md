@@ -1,12 +1,8 @@
 ## GAN-based Image Augmentation Generation via *DiscoFaceGAN*
 
-Paper:
 
-**Disentangled and Controllable Face Image Generation via 3D Imitative-Contrastive Learning**, CVPR 2020. (**_Oral_**)
+This code is based on the official [DiscoFaceGAN](https://github.com/microsoft/DiscoFaceGAN) repository of the paper Disentangled and Controllable Face Image Generation via 3D Imitative-Contrastive Learning. Please strickly follow their licence (Licensed under the MIT license) and cite the corrosponding work.    
 
-Yu Deng, Jiaolong Yang, Dong Chen, Fang Wen, and Xin Tong
-
-Paper: [https://arxiv.org/abs/2004.11660](https://arxiv.org/abs/2004.11660v2)
 
 
 To generate images we recommend creating a virtual environment with *`requirementsTF.txt`*.  
