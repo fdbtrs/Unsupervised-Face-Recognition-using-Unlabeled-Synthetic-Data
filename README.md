@@ -16,7 +16,7 @@
 - Tensorflow 1.12 with GPU support
 
 We recommend creating a virtual environment with *`requirementsTF.txt`*.  
-Download pretrained [DiscoFaceGAN model](https://drive.google.com/uc?id=1nT_cf610q5mxD_jACvV43w4SYBxsPUBq), strickly follow [DiscoFaceGAN](https://github.com/microsoft/DiscoFaceGAN) license and save in `DiscoFaceGAN/pretrained/`. 
+Download pretrained [DiscoFaceGAN](https://github.com/microsoft/DiscoFaceGAN), strickly follow [DiscoFaceGAN](https://github.com/microsoft/DiscoFaceGAN) license and save in `DiscoFaceGAN/pretrained/`. 
 
 ### Requirements for USynthFace Training
 - pytorch 1.11.0
