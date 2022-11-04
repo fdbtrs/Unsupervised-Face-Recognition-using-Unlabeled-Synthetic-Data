@@ -6,9 +6,9 @@ This is the offical repository of the paper:
 ## Pretrained Models
 | Model  | Images | LFW | AgeDB-30 | CFP-FP | CA-LFW | CP-LFW | Pretrained Model |
 | ----------- | ---- | ----- | ----- | ----- | ----- | ----- | ---------------- |
-| USynthFace  | 100K | 91.52 | 69.30 | 78.46 | 75.35 | 71.93 | [download](link) |
-| USynthFace  | 200K | 91.93 | 71.23 | 78.03 | 76.73 | 72.27 | [download](link) |
-| USynthFace  | 400K | 92.23 | 71.62 | 78.56 | 77.05 | 72.03 | [download](link) |
+| USynthFace  | 100K | 91.52 | 69.30 | 78.46 | 75.35 | 71.93 | [download](https://drive.google.com/drive/folders/1NoabeSsgxVZ2FNCww1zzhyi0NGNKwvwF?usp=sharing) |
+| USynthFace  | 200K | 91.93 | 71.23 | 78.03 | 76.73 | 72.27 | [download](https://drive.google.com/drive/folders/1NoabeSsgxVZ2FNCww1zzhyi0NGNKwvwF?usp=sharing) |
+| USynthFace  | 400K | 92.23 | 71.62 | 78.56 | 77.05 | 72.03 | [download](https://drive.google.com/drive/folders/1NoabeSsgxVZ2FNCww1zzhyi0NGNKwvwF?usp=sharing) |
 
 
 ## Requirements
