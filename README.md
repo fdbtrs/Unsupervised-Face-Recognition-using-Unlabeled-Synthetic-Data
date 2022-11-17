@@ -64,6 +64,22 @@ Test log is saved in model_folder.
 - [Moco](https://github.com/facebookresearch/moco)
 
 
+If you use any of the code provided in this repository, please cite the following paper:
+## Citation
+```
+@article{DBLP:journals/corr/abs-2211-07371,
+  author    = {Fadi Boutros and
+               Marcel Klemt and
+               Meiling Fang and
+               Arjan Kuijper and
+               Naser Damer},
+  title     = {Unsupervised Face Recognition using Unlabeled Synthetic Data},
+  journal   = {CoRR},
+  volume    = {abs/2211.07371},
+  year      = {2022}
+}
+```
+
 ## License
 
 ```
