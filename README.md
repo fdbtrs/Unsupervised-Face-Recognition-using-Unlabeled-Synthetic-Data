@@ -67,17 +67,25 @@ Test log is saved in model_folder.
 If you use any of the code provided in this repository, please cite the following paper:
 ## Citation
 ```
-@article{DBLP:journals/corr/abs-2211-07371,
+
+
+@inproceedings{DBLP:conf/fgr/BoutrosKFKD23,
   author    = {Fadi Boutros and
                Marcel Klemt and
                Meiling Fang and
                Arjan Kuijper and
                Naser Damer},
   title     = {Unsupervised Face Recognition using Unlabeled Synthetic Data},
-  journal   = {CoRR},
-  volume    = {abs/2211.07371},
-  year      = {2022}
+  booktitle = {17th {IEEE} International Conference on Automatic Face and Gesture
+               Recognition, {FG} 2023, Waikoloa Beach, HI, USA, January 5-8, 2023},
+  pages     = {1--8},
+  publisher = {{IEEE}},
+  year      = {2023},
+  url       = {https://doi.org/10.1109/FG57933.2023.10042627},
+  doi       = {10.1109/FG57933.2023.10042627},
 }
+
+
 ```
 
 ## License
